@@ -4,10 +4,7 @@ using TestAPI.Data;
 using TestAPI.Entities;
 
 namespace TestAPI.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
+public class UsersController : BasApiController
 {
     private readonly DataContext _context;
 

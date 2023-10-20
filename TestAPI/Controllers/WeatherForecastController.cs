@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace TestAPI.Controllers;
-
-[ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class WeatherForecastController : BasApiController
 {
     private static readonly string[] Summaries = new[]
     {
