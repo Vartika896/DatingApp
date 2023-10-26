@@ -11,7 +11,6 @@ using TestAPI.Interfaces;
 
 namespace TestAPI.Controllers
 {
-    [Authorize]
     public class AccountController: BasApiController
     {
         private readonly DataContext _context;
