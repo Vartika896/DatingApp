@@ -2,6 +2,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using TestAPI.Extensions;
+using TestAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ builder.Services.AddIdentityServices(builder.Configuration);
 
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 app.UseCors(builder=> builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
